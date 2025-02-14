@@ -31,3 +31,6 @@ main.h é responsável por importar todos os módulos supracitados e inicializa-
 O callback do botão esquerdo, habilita/desabilita os leds azul e vermelho. O callback do botão do joystick liga/desliga o led verde e alterna a espessura da borda do display.
 
 O loop principal captura a cada 100ms os valores do joystick nos eixos X e Y e repassa-os tanto para o LED RGB quanto para o display. Estas coordenadas determinam: a posição do quadrado exibido no display (ou seja, acompanha o movimento do joystick exibindo-o de forma gráfica) e a intensidade dos LEDs azul (eixo Y) e vermelho (eixo X).
+
+### Vídeo
+[https://drive.google.com/file/d/1J-TFrLZ8UOa9OPU5vQSOE5l_LgEJiYR4/view?usp=sharing](https://drive.google.com/file/d/1J-TFrLZ8UOa9OPU5vQSOE5l_LgEJiYR4/view?usp=sharing)
