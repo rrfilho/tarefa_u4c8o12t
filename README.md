@@ -5,7 +5,7 @@ Repositório da tarefa 8 (unidade 4, capítulo 8) do curso de capacitação em s
 ### buttons.h e leds.h
 O módulo buttons.h é responsável por inicializar e associar eventos ao botão esquerdo (botão A) e ao botão do joystick do kit de desenvolvimento BitDogLab. Este módulo também efetua o debounce via software.
 
-O módulo leds.h é responsável por inicializar o led RGB e oferece 3 funções, permitindo o controle individual das cores do LED RGB. As 3 funções aceitam um valor de brilho que pode variar de -1.0f à 1.0f, onde 0.0f é apagado e ±1.0f é o brilho máximo.
+O módulo leds.h é responsável por inicializar o LED RGB, oferecendo 3 funções para o controle individual das cores. As 3 funções aceitam um valor de brilho que pode variar de -1.0f à 1.0f, onde 0.0f é apagado e ±1.0f é o brilho máximo.
 Todas as fuções utilizam PWM para controlar a intesidade das cores.
 
 
@@ -26,6 +26,8 @@ Módulo responsável por inicializar e realizar a leitura da posição do joysti
 
 
 ### main.h
-main.h é responsável por importar todos os módulos supracitados e inicializa-los. Ao chamar o inicializador do botões, 2 funções de callback são passadas como parâmetro: uma função para tratar os eventos do botão esquerdo e outra para tratar os eventos do botão do joystick. O callback do botão esquerdo, habilita/desabilita os leds azul e vermelho. O callback do botão do joystick liga/desliga o led verde e alterna a espessura da borda do display.
+main.h é responsável por importar todos os módulos supracitados e inicializa-los. Ao chamar o inicializador do botões, 2 funções de callback são passadas como parâmetro: uma função para tratar os eventos do botão esquerdo e outra para tratar os eventos do botão do joystick. 
 
-O loop principal captura a cada 100ms os valores do joystick nos eixos X e Y e repassa-os para display. Estas coordenadas determinam a posição do quadrado exibido no display, ou seja, acompanha o movimento do joystick exibindo-o de forma gráfica.
+O callback do botão esquerdo, habilita/desabilita os leds azul e vermelho. O callback do botão do joystick liga/desliga o led verde e alterna a espessura da borda do display.
+
+O loop principal captura a cada 100ms os valores do joystick nos eixos X e Y e repassa-os tanto para o LED RGB quanto para o display. Estas coordenadas determinam: a posição do quadrado exibido no display (ou seja, acompanha o movimento do joystick exibindo-o de forma gráfica) e a intensidade dos LEDs azul (eixo Y) e vermelho (eixo X).
